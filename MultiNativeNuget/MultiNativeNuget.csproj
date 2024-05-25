@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Windows\**" Condition="'$(RuntimeIdentifier)' != 'win-x64'" />
+		<Compile Remove="Linux\**" Condition="'$(RuntimeIdentifier)' != 'linux-x64'" />
+	</ItemGroup>
+
+</Project>
